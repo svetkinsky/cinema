@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title>Первый кинотеатр в Иннополис</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -13,20 +14,26 @@
 
 <body>
     <img src="images/top_bg.jpg" width="300px" alt="background">
-    <header style="background: black">
+    <header style="background: gray">
         <div>
             <a title="Сайт университета Иннополис" target="_blank" href="https://university.innopolis.ru/"><img src="images/logo.png" alt="логотип Университета Иннополис"></a>
-            
         </div>
         <div style="color: white">
-            ЗАКАЗАТЬ БИЛЕТ ПРЕИМУЩЕСТВА ФИЛЬМЫ КОНТАКТЫ
-            Ваш город: <u>Москва</u>
+            <nav>
+                <ul>
+                    <li><a href="#order"> ЗАКАЗАТЬ БИЛЕТ</a></li> 
+                    <li><a href="#why"> ПРЕИМУЩЕСТВА</a></li>
+                    <li><a href="#films"> ФИЛЬМЫ</a></li>
+                    <li><a href="#contacts"> КОНТАКТЫ</a></li>  
+                </ul>
+            </nav>
         </div>
+        <p>Ваш город: <u>Москва</u></p>
     </header>
     
 
     <div>
-        <h1 >Закажите билет в кино</h1>
+        <h1>Закажите билет в кино</h1>
         <b>Всем покупателям подарок!</b>
     </div>
 
@@ -42,9 +49,7 @@
 
    
     <div>
-        <h2>
-            Почему мы?
-        </h2>
+        <h2 id="why">Почему мы?</h2>
         
         <section>
             <article> 
@@ -72,16 +77,52 @@
     
 
     <div>
-        <h2>
-            Выберите фильм
-        </h2>
-        <p>Начало сеанса 	Название фильма 	Жанр</p>  
-        <p>10:00	Человек-паук фантастика, боевик, приключения</p>   
-        <p>12:00	Собачья жизнь 2	фэнтези, драма, комедия</p>  
-        <p>14:00	История игрушек 4	мультфильм, фэнтези, комедия</p>  
-        <p>16:00	Люди в черном: Интернэшнл	фантастика, боевик, комедия</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eum facere obcaecati quam rem repellendus veritatis. Aliquam beatae, delectus dignissimos enim exercitationem mollitia nisi pariatur quaerat quam, qui quibusdam sunt!</p>
+        <h2 id="films">Выберите фильм</h2>
+        <!-- оставила пока cellspacing, чтобы показать, что я его попробовала) без него граница норм прорисовывается за счет collapse -->
+        <!-- если убрать style="border-collapse: collapse", то прорисовывается двойная линия-->
+        <table height="100" cellpadding="10" cellspacing="0" border="1" style="border-collapse: collapse" >
+            <thead> 
+                <tr>
+                    <th colspan="2">Начало сеанса</th>
+                    <th>Название фильма</th>
+                    <th>Жанр</th>
+                </tr>
+            </thead>
+            <tbody style="height: 100px; overflow:scroll; display:block">
+                <tr>
+                    <td>v</td>
+                    <td>10:00</td>
+                    <td>Человек-паук</td>
+                    <td>фантастика, боевик, приключения</td>
+                </tr>
+                <tr>
+                    <td>v</td>
+                    <td>12:00</td>
+                    <td>Собачья жизнь 2</td>
+                    <td>фэнтези, драма, комедия</td>
+                </tr>
+                <tr>
+                    <td>v</td>
+                    <td>14:00</td>
+                    <td>История игрушек 4</td>
+                    <td>мультфильм, фэнтези, комедия</td>
+                </tr>
+                <tr>
+                    <td>v</td>
+                    <td>16:00</td>
+                    <td>Люди в черном: Интернэшнл</td>
+                    <td>фантастика, боевик, комедия</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eum facere obcaecati quam rem repellendus veritatis. Aliquam beatae, delectus dignissimos enim exercitationem mollitia nisi pariatur quaerat quam, qui quibusdam sunt!</td>
+                    
+                </tr>
+            </tfoot>
+        </table>
         <br>
+       
     </div>
     <div>
         <img src="images/b4_img.jpg" alt="подарок">
@@ -124,32 +165,50 @@
           
     
     <footer>
-        <div>
-            Имя*
-        </div>
-        
-        <div>
-            Выбор1
-            Выбор2
-        </div>
-
-        <div>
-            Комментарий
-        </div>
-
-        <div>
-            Я согласен на обработку персональных данных        
-        </div>
-
-        <div>
-            Загрузить файл
-        </div>
-
-        <div>
-            Отправить
-        </div>
+        <form id="order" action="order.php">
+            <input placeholder="Имя*" required/>
+            <br>
+            <br>
+            <input type="email" placeholder="Адрес электронной почты"/>
+            <br>
+            <br>
+            <select>
+                <option>Выбор1</option>
+                <option>Выбор2</option>
+                <option>Выбор3</option>
+                <option>Выбор4</option>
+                <option selected>Выбор5</option>
+                <option>Выбор6</option>
+                <option>Выбор7</option>
+                <option>Выбор8</option>
+                <option>Выбор9</option>
+                <option>Выбор10</option>
+            </select>
+            <br>
+            <br>
+            <input id="sel1" type="radio" name="any" value="1"/> 
+            <label for="sel1">Выбор 1</label>
+            <br>
+            <input id="sel2" type="radio" name="any" value="2"/> 
+            <label for="sel2">Выбор 2</label>
+            <br>
+            <br>
+            <textarea placeholder="Кимментарий"></textarea>
+             <br>
+             <br>
+             <input id="chbx" type="checkbox"/>
+             <label for="chbx">Я согласен на обработку персональных данных</label>
+             <br>
+             <br>
+             <input type="file"/>
+             <br>
+             <br>
+            <button type="submit">Заказать</button>
+            <br>
+            <br>    
+        </form>
+        <p><a id="contacts"></a>facebook twitter instagram google+</p>
     </footer>
-
 </body>
 
 </html>
