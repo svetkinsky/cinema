@@ -10,6 +10,7 @@
     <title>Webpack Boilerplate</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" type="text/css" href="build/style.css" />
+    <link rel="stylesheet" href="css/main.css"/>
 </head>
 
 <body>
@@ -76,54 +77,81 @@
 
     
 
-    <div>
-        <h2 id="films">Выберите фильм</h2>
-        <!-- оставила пока cellspacing, чтобы показать, что я его попробовала) без него граница норм прорисовывается за счет collapse -->
-        <!-- если убрать style="border-collapse: collapse", то прорисовывается двойная линия-->
-        <table height="100" cellpadding="10" cellspacing="0" border="1" style="border-collapse: collapse" >
-            <thead> 
-                <tr>
-                    <th colspan="2">Начало сеанса</th>
-                    <th>Название фильма</th>
-                    <th>Жанр</th>
-                </tr>
-            </thead>
-            <tbody style="height: 100px; overflow:scroll; display:block">
-                <tr>
-                    <td>v</td>
-                    <td>10:00</td>
-                    <td>Человек-паук</td>
-                    <td>фантастика, боевик, приключения</td>
-                </tr>
-                <tr>
-                    <td>v</td>
-                    <td>12:00</td>
-                    <td>Собачья жизнь 2</td>
-                    <td>фэнтези, драма, комедия</td>
-                </tr>
-                <tr>
-                    <td>v</td>
-                    <td>14:00</td>
-                    <td>История игрушек 4</td>
-                    <td>мультфильм, фэнтези, комедия</td>
-                </tr>
-                <tr>
-                    <td>v</td>
-                    <td>16:00</td>
-                    <td>Люди в черном: Интернэшнл</td>
-                    <td>фантастика, боевик, комедия</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eum facere obcaecati quam rem repellendus veritatis. Aliquam beatae, delectus dignissimos enim exercitationem mollitia nisi pariatur quaerat quam, qui quibusdam sunt!</td>
-                    
-                </tr>
-            </tfoot>
-        </table>
-        <br>
-       
+    <div class="movie-list">
+        <h2 id="films" class="movie-list__header">Выберите фильм</h2>
+        <div class="container">
+            <table class="movie-list__table">
+                <thead class="movie-list__table__header"> 
+                    <tr>
+                        <th>
+                            <a href="#">Начало сеанса</a>
+                        </th>
+                        <th class="header_central_columns">
+                            <a href="#">
+                                Название фильма
+                            </a>
+                        </th>
+                        <th class="header_central_columns">Жанр</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="movie-list__body">
+                    <tr class="odd">
+                        <td class="first__column">10:00</td>
+                        <td class="second__column">Человек-паук</td>
+                        <td class="third__column">фантастика, боевик, приключения</td>
+                        <td class="fourth__column">
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="33px" height="33px">
+                           <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                            d="M16.505,32.994 C7.393,32.994 0.005,25.607 0.005,16.494 C0.005,7.381 7.393,-0.006 16.505,-0.006 C25.618,-0.006 33.005,7.381 33.005,16.494 C33.005,25.607 25.618,32.994 16.505,32.994 ZM24.214,14.591 L18.356,14.631 L18.356,8.796 L13.958,8.777 L13.958,14.637 L8.083,14.637 L8.083,19.074 L13.958,19.074 L13.958,24.889 L18.336,24.889 L18.307,19.074 L24.231,19.074 L24.214,14.591 Z"/>
+                           </svg>
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td class="first__column">12:00</td>
+                        <td class="second__column">Собачья жизнь 2</td>
+                        <td class="third__column">фэнтези, драма, комедия</td>
+                        <td class="fourth__column"><svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="33px" height="33px">
+                           <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                            d="M16.505,33.210 C7.393,33.210 0.005,25.823 0.005,16.710 C0.005,7.597 7.393,0.210 16.505,0.210 C25.618,0.210 33.005,7.597 33.005,16.710 C33.005,25.823 25.618,33.210 16.505,33.210 ZM24.214,14.807 L18.356,14.847 L18.356,9.012 L13.958,8.994 L13.958,14.853 L8.083,14.853 L8.083,19.291 L13.958,19.291 L13.958,25.105 L18.336,25.105 L18.307,19.291 L24.231,19.291 L24.214,14.807 Z"/>
+                           </svg></td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="first__column">14:00</td>
+                        <td class="second__column">История игрушек 4</td>
+                        <td class="third__column">мультфильм, фэнтези, комедия</td>
+                        <td class="fourth__column"><svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="33px" height="33px">
+                           <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                            d="M16.613,33.102 C7.501,33.102 0.113,25.715 0.113,16.602 C0.113,7.489 7.501,0.102 16.613,0.102 C25.726,0.102 33.113,7.489 33.113,16.602 C33.113,25.715 25.726,33.102 16.613,33.102 ZM24.322,14.699 L18.464,14.738 L18.464,8.904 L14.066,8.886 L14.066,14.745 L8.191,14.745 L8.191,19.182 L14.066,19.182 L14.066,24.998 L18.444,24.998 L18.415,19.182 L24.339,19.182 L24.322,14.699 Z"/>
+                           </svg></td>
+                    </tr>
+                    <tr class="even">
+                        <td class="first__column">16:00</td>
+                        <td class="second__column">Люди в черном: Интернэшнл</td>
+                        <td class="third__column">фантастика, боевик, комедия</td>
+                        <td class="fourth__column"><svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="33px" height="33px">
+                           <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                            d="M16.505,32.994 C7.393,32.994 0.005,25.606 0.005,16.494 C0.005,7.381 7.393,-0.006 16.505,-0.006 C25.618,-0.006 33.005,7.381 33.005,16.494 C33.005,25.606 25.618,32.994 16.505,32.994 ZM24.214,14.591 L18.356,14.631 L18.356,8.796 L13.958,8.778 L13.958,14.637 L8.083,14.637 L8.083,19.074 L13.958,19.074 L13.958,24.889 L18.336,24.889 L18.307,19.074 L24.231,19.074 L24.214,14.591 Z"/>
+                           </svg></td>
+                    </tr>
+                </tbody>                    
+            </table>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eum facere obcaecati quam rem repellendus veritatis. Aliquam beatae, delectus dignissimos enim exercitationem mollitia nisi pariatur quaerat quam, qui quibusdam sunt!</p>  
     </div>
+
     <div>
         <img src="images/b4_img.jpg" alt="подарок">
         <h2>Подарок каждому!</h2>
