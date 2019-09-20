@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-body, p, h1, h2, h3, h4, h5, h6, table, th, td{
+body, p, span, h1, h2, h3, h4, h5, h6, table, th, td{
     background: transparent;
     border: 0px;
     margin: 0px;
@@ -56,6 +56,7 @@ body, p, h1, h2, h3, h4, h5, h6, table, th, td{
     color: #fff;
     text-decoration: none;
 }
+
 .movie-list__body{
     vertical-align: top;
 }
@@ -69,7 +70,7 @@ body, p, h1, h2, h3, h4, h5, h6, table, th, td{
     background: #373737
 }
 .even{
-    background: #4b4d4f
+    background: #6c6c6c
 }
 .first__column{
     width: 230px;
