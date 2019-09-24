@@ -44,10 +44,11 @@ body, p, span, h1, h2, h3, h4, h5, h6, table, th, td{
     font-weight: 700;
     color: #fff;
     background: #a3cc40;
+    text-align: center; 
 }
 .header_central_columns{
-    padding: 0 0 0 38px;
-    text-align: left;
+    /* padding: 0 0 0 38px; */
+    text-align: center;
 }
 .movie-list__table th{
     height: 73px;
@@ -55,6 +56,9 @@ body, p, span, h1, h2, h3, h4, h5, h6, table, th, td{
 .movie-list__table th a{
     color: #fff;
     text-decoration: none;
+}
+.movie-list__table__header i{
+    font-size: 20px;
 }
 
 .movie-list__body{
@@ -66,11 +70,22 @@ body, p, span, h1, h2, h3, h4, h5, h6, table, th, td{
     color: #fff;
     height: 75px;
 }
+.movie-list__body td a{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight:  400;
+    color: #fff;
+    height: 75px;
+}
 .odd{
     background: #373737
 }
 .even{
-    background: #6c6c6c
+    background: #4b4d4f
+}
+
+tr:nth-child(3n+3) {
+    background: #6c6c6c;
 }
 .first__column{
     width: 230px;
@@ -93,3 +108,4 @@ body, p, span, h1, h2, h3, h4, h5, h6, table, th, td{
 .header_second_column{
     padding: 0 0 0 68px;
 }
+
